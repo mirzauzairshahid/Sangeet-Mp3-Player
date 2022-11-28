@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Sangeet</string>
+
+    <string name="app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="interstitial_admob" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_admob" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="native_id_admob" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+
+
+    <string name="home">Home</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="playlists">Playlists</string>
+    <string name="personalization">Personalization</string>
+    <string name="favorites">Favorites</string>
+    <string name="recent_tracks">Recent Tracks</string>
+    <string name="in_motion">In Motion</string>
+    <string name="trent_renzor_and_atticus_ross">Trent Renzor and Atticus Ross</string>
+    <string name="playlist_name">Playlist Name</string>
+    <string name="NoSong">No Song</string>
+    <string name="previous_song">Previous Song</string>
+    <string name="next_song">Next Song</string>
+    <string name="music_player">Sangeet</string>
+    <string name="create_playlist">Create Playlist</string>
+    <string name="enter_playlist_name">Enter Playlist Name</string>
+    <string name="choose_playlist">Choose Playlist:</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_downloaded_songs">No downloaded songs</string>
+    <string name="refresh">Refresh</string>
+
+</resources>

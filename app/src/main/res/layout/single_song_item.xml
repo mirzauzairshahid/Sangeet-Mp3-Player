@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:cardElevation="0dp"
+        android:id="@+id/cardViewForSong"
+        app:cardBackgroundColor="@color/bg_color"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color">
+
+            <ImageView
+                android:id="@+id/btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/btnFav"
+                android:src="@drawable/play_button"
+                app:tint="@color/item_color" />
+
+            <TextView
+                android:id="@+id/txtSongName"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/asap_medium"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/in_motion"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_thin" />
+
+            <TextView
+                android:id="@+id/txtSongArtistName"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSongName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/trent_renzor_and_atticus_ross"
+                android:textColor="@color/track_color"
+                android:textSize="@dimen/radius_small" />
+
+            <ToggleButton
+                android:id="@+id/btnFav"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/fav_selector"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.ads.nativetemplates.TemplateView
+        android:id="@+id/my_template"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:gnt_template_type="@layout/gnt_medium_template_view" />
+
+</LinearLayout>

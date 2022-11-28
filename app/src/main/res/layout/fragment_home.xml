@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:id="@+id/containerList"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/homeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/secondaryColor"
+        app:title="Sangeet"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <ImageButton
+            android:id="@+id/fabRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/refresh_option"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_gravity="center|right" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/homeToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerRecentTrack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/corner"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/single_recent_track" />
+
+            <TextView
+                android:id="@+id/list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/item_color"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/asap_medium"
+                android:layout_below="@+id/recyclerRecentTrack"
+                android:text="My List"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAllSongs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/list"
+                android:scrollbars="vertical"
+                android:scrollbarSize="@dimen/scroll_bar_size"
+                android:layout_marginTop="5dp"
+                android:scrollbarStyle="insideOverlay"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/single_song_item" />
+
+                <TextView
+                    android:id="@+id/viewAllBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View All"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/backgroundColor"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/recyclerRecentTrack"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/asap_medium"/>
+
+            <ProgressBar
+                android:id="@+id/refreshProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>
